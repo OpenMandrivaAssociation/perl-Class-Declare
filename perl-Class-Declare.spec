@@ -10,7 +10,6 @@ URL:		http://search.cpan.org/dist/%{real_name}
 Source0:	%{real_name}-%{version}.tar.bz2
 BuildRequires:	perl-devel, perl-Test-Exception
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Class::Declare allows class authors to specify public, private and
