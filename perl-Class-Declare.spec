@@ -1,16 +1,19 @@
-%define real_name Class-Declare
+%define upstream_name    Class-Declare
+%define upstream_version 0.12
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	Class-Declare module for perl 
-Name:		perl-%{real_name}
-Version:	0.12
-Release:	%mkrel 1
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{real_name}
-Source0:	%{real_name}-%{version}.tar.bz2
-BuildRequires:	perl-devel, perl-Test-Exception
+URL:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{upstream_version}.tar.bz2
+
+BuildRequires:	perl-Test-Exception
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Class::Declare allows class authors to specify public, private and
@@ -21,7 +24,7 @@ implemented for both class and instance (or object) attributes and
 methods.
 
 %prep
-%setup -q -n %{real_name}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -41,5 +44,3 @@ rm -rf %{buildroot}
 %{perl_vendorlib}/Class/Declare.pm
 %{perl_vendorlib}/Class/Declare
 %{_mandir}/*/*
-
-
