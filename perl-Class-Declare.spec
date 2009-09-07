@@ -1,5 +1,5 @@
 %define upstream_name    Class-Declare
-%define upstream_version 0.12
+%define upstream_version 0.13
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -9,7 +9,7 @@ Summary:	Class-Declare module for perl
 License:	GPL+ or Artistic
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:	http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-Test-Exception
 BuildArch:	noarch
