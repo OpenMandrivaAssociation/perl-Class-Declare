@@ -1,9 +1,9 @@
 %define upstream_name    Class-Declare
-%define upstream_version 0.13
+%define upstream_version 0.17
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 1
 
 Summary:	Class-Declare module for perl 
 License:	GPL+ or Artistic
