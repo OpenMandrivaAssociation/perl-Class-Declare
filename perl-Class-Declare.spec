@@ -1,15 +1,15 @@
 %define upstream_name    Class-Declare
-%define upstream_version 0.17
+%define upstream_version 0.20
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Class-Declare module for perl 
 License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{upstream_version}.tar.gz
+URL:		https://github.com/denormal/perl-Class-Declare
+Source0:	https://cpan.metacpan.org/authors/id/I/IB/IBB/Class-Declare-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
