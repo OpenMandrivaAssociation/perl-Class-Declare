@@ -1,15 +1,13 @@
 %define upstream_name    Class-Declare
-%define upstream_version 0.20
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	0.20
+Release:	2
 
 Summary:	Class-Declare module for perl 
 License:	GPL+ or Artistic
 Group:		Development/Perl
 URL:		https://github.com/denormal/perl-Class-Declare
-Source0:	https://cpan.metacpan.org/authors/id/I/IB/IBB/Class-Declare-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/I/IB/IBB/Class-Declare-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -25,7 +23,7 @@ implemented for both class and instance (or object) attributes and
 methods.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -54,9 +52,7 @@ make test
 
 * Wed Jul 29 2009 Jérôme Quelin <jquelin@mandriva.org> 0.120.0-1mdv2010.0
 + Revision: 403011
-- rebuild using %%perl_convert_version
-
-* Tue Jul 08 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.12-1mdv2009.0
+- rebuild using %0.20 Tue Jul 08 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.12-1mdv2009.0
 + Revision: 232708
 - update to new version 0.12
 
